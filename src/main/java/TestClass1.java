@@ -10,7 +10,7 @@ public class TestClass1 {
 //        driver.navigate().refresh();
         driver.manage().window().maximize();
 //        System.out.println(driver.manage().window().getSize());
-        seleniumjavapractise1.UtilityClass.waitFor(3000);
+        UtilityClass.waitFor(3000);
         driver.quit();
     }
 }

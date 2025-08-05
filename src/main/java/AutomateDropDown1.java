@@ -9,14 +9,14 @@ public class AutomateDropDown1 {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to("https://www.amazon.com/");
-        seleniumjavapractise1.UtilityClass.waitFor(5000);
+        UtilityClass.waitFor(5000);
 
         WebElement dd = driver.findElement(By.id("searchDropdownBox"));
         Select s1 = new Select(dd);
 //        s1.selectByValue("search-alias=baby-products-intl-ship");
 //        s1.selectByIndex(4);
         s1.selectByVisibleText("Books");
-        seleniumjavapractise1.UtilityClass.waitFor(2000);
+        UtilityClass.waitFor(2000);
         driver.quit();
     }
 }

@@ -12,7 +12,7 @@ public class ActionsClassDemo1 {
         WebElement e1 = driver.findElement(By.xpath("//div[text()='EN']"));
         Actions act = new Actions(driver);
         act.moveToElement(e1).perform();
-        seleniumjavapractise1.UtilityClass.waitFor(5000);
+        UtilityClass.waitFor(5000);
         driver.quit();
     }
 }
