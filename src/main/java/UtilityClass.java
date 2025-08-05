@@ -1,9 +1,7 @@
-package seleniumjavapractise1;
-
 public class UtilityClass {
-    public static void waitFor(long miliseconds){
+    public static void waitFor(long miliSeconds){
         try {
-            Thread.sleep(miliseconds);
+            Thread.sleep(miliSeconds);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

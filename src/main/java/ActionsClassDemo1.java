@@ -1,5 +1,3 @@
-package seleniumjavapractise1;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +12,7 @@ public class ActionsClassDemo1 {
         WebElement e1 = driver.findElement(By.xpath("//div[text()='EN']"));
         Actions act = new Actions(driver);
         act.moveToElement(e1).perform();
-        UtilityClass.waitFor(5000);
+        seleniumjavapractise1.UtilityClass.waitFor(5000);
         driver.quit();
     }
 }

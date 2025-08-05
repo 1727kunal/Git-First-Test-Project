@@ -1,5 +1,3 @@
-package seleniumjavapractise1;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,14 +9,14 @@ public class AutomateDropDown1 {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to("https://www.amazon.com/");
-        UtilityClass.waitFor(5000);
+        seleniumjavapractise1.UtilityClass.waitFor(5000);
 
         WebElement dd = driver.findElement(By.id("searchDropdownBox"));
         Select s1 = new Select(dd);
 //        s1.selectByValue("search-alias=baby-products-intl-ship");
 //        s1.selectByIndex(4);
         s1.selectByVisibleText("Books");
-        UtilityClass.waitFor(2000);
+        seleniumjavapractise1.UtilityClass.waitFor(2000);
         driver.quit();
     }
 }

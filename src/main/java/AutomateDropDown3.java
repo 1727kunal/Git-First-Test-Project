@@ -1,4 +1,4 @@
-package seleniumjavapractise1;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -13,7 +13,7 @@ public class AutomateDropDown3 {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to("https://www.amazon.com/");
-        UtilityClass.waitFor(5000);
+        seleniumjavapractise1.UtilityClass.waitFor(5000);
 
         List<WebElement> allOptions = driver.findElements(By.xpath("//select/option"));
         for(WebElement e : allOptions){
@@ -22,7 +22,7 @@ public class AutomateDropDown3 {
            }
         }
 
-        UtilityClass.waitFor(5000);
+        seleniumjavapractise1.UtilityClass.waitFor(5000);
         driver.quit();
     }
 }
