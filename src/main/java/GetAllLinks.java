@@ -2,11 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 public class GetAllLinks {
     public static void main(String[] args) {
@@ -15,18 +11,15 @@ public class GetAllLinks {
         driver.manage().window().maximize();
 
         List<WebElement> allLinks = driver.findElements(By.tagName("a"));
-        Set<WebElement> uniqueLinks = new HashSet<>(allLinks);
+        int count = allLinks.size();
+        System.out.println("Total number of links = " +count);
 
-        int count = uniqueLinks.size();
-        System.out.println("Total number of links present on Google page = "+count);
+        for (int i = 0; i < count; i++) {
+            String linkText = allLinks.get(i).getText();
+            System.out.println("URL " +(i+1)+ " Text: " +linkText);
 
-//        for(WebElement e : uniqueLinks){
-//            System.out.println(e.getAttribute("href"));
-//        }
-
-        Iterator<WebElement> itr = uniqueLinks.iterator();
-        while (itr.hasNext()){
-            System.out.println(itr.next().getAttribute("href"));
+            String linkURL = allLinks.get(i).getAttribute("href");
+            System.out.println("URL " +(i+1)+ ": " +linkURL);
         }
 
         UtilityClass.waitFor(2000);
